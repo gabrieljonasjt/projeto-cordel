@@ -1,0 +1,99 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Passion;
+    src: url(fonts/PassionOne-Regular.ttf) format(truetype);
+    font-family: Sriracha;
+    src: url(fonts/Sriracha-Regular.ttf) format(truetype);
+}
+:root{
+    --fonte1: Verdana, sans-serif;
+    --fonte2: 'Passion', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+/*
+root = onde configuramos as variaveis(colocamos '--' antes delas)*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: var(--fonte1);
+    background-color: darkgray;
+    min-height: 100vh;
+}
+header{
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+}
+header > h1{
+    font-family: var(--fonte2);
+    font-variant: small-caps;
+    font-size: 5vw;
+}
+/*
+Small-Caps = As letras são maiúsculas, mas as primeiras são maiores
+*/
+header > p{
+    padding-bottom: 50px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+section{
+    font-family: var(--fonte3);
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 1.1em;
+    padding-left: 30px;
+    font-size: 3vw;
+}
+/*
+line-height = altura da linha
+*/
+section > p{
+    padding-bottom: 2em;
+}
+a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+section.normal{
+    background-color: white;
+    color: black;
+}
+section.imagem{
+    background-color: rgb(58, 58, 58);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px  rgba(0, 0, 0, 0.425);
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*
+o background fixed é o que faz o efeito parallax pois a imagem fica fixa ao fundo.
+*/
+section.imagem > p{
+    background-color: rgba(0, 0, 0, 0.616);
+    display: inline-block;
+    padding: 15px;
+    border-radius: 10px;
+    text-shadow: 1px 1px 10px black;
+
+}
+section#img01{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+}
+section#img02{
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
